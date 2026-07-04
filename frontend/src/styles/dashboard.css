@@ -1,0 +1,473 @@
+.dashboard{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:14px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.card{
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:16px;
+
+  padding:16px;
+}
+
+/* =========================================
+   STATS GRID
+========================================= */
+
+.statsGrid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:12px;
+}
+
+/* =========================================
+   STATS CARD
+========================================= */
+
+.statCard{
+
+  position:relative;
+
+  height:105px;
+
+  overflow:hidden;
+
+  padding:14px;
+}
+
+.statCard::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:3px;
+}
+
+.statCard.cyan::before{
+  background:var(--primary);
+}
+
+.statCard.green::before{
+  background:var(--green);
+}
+
+.statCard.red::before{
+  background:var(--red);
+}
+
+.statCard.yellow::before{
+  background:var(--yellow);
+}
+
+/* TOP */
+
+.statTop{
+
+  display:flex;
+  justify-content:space-between;
+}
+
+/* TITLE */
+
+.statTop p{
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  letter-spacing:.6px;
+
+  margin-bottom:8px;
+
+  text-transform:uppercase;
+}
+
+/* VALUE */
+
+.statTop h2{
+
+  font-size:32px;
+  font-weight:800;
+
+  line-height:1;
+
+  margin-bottom:8px;
+}
+
+/* SUB */
+
+.statTop span{
+
+  font-size:12px;
+
+  color:var(--muted);
+}
+
+/* ICON */
+
+.statIcon{
+
+  font-size:20px;
+
+  opacity:.12;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.middleGrid,
+.bottomGrid{
+
+  display:grid;
+
+  grid-template-columns:
+    2fr 1fr;
+
+  gap:14px;
+}
+
+/* =========================================
+   LARGE CARD
+========================================= */
+
+.largeCard{
+
+  min-height:210px;
+}
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.cardHeader{
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  margin-bottom:16px;
+}
+
+.cardHeader h3{
+
+  font-size:16px;
+  font-weight:700;
+}
+
+.cardHeader span{
+
+  font-size:12px;
+
+  color:var(--primary);
+
+  cursor:pointer;
+}
+
+/* =========================================
+   GRAPH
+========================================= */
+
+.graphBars{
+
+  height:110px;
+
+  display:flex;
+  align-items:flex-end;
+
+  gap:3px;
+}
+
+/* BAR */
+
+.bar{
+
+  flex:1;
+
+  border-radius:4px 4px 0 0;
+}
+
+.bar.cyan{
+  background:#29b8ff;
+}
+
+.bar.green{
+  background:#13d698;
+}
+
+/* =========================================
+   GREEN DOT
+========================================= */
+
+.greenDot{
+
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:var(--green);
+}
+
+/* =========================================
+   RISK CARD
+========================================= */
+
+.riskCard{
+
+  min-height:210px;
+}
+
+/* RISK CONTENT */
+
+.riskCircle{
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:20px;
+
+  height:140px;
+}
+
+/* PIE */
+
+.circle{
+
+  width:90px;
+  height:90px;
+
+  border-radius:50%;
+
+  background:
+    conic-gradient(
+      #00e096 0 40%,
+      #ffc542 40% 66%,
+      #ff9f43 66% 81%,
+      #ff5c7c 81% 100%
+    );
+}
+
+/* LEGEND */
+
+.riskLegend{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:10px;
+}
+
+.riskLegend p{
+
+  display:flex;
+  align-items:center;
+
+  gap:8px;
+
+  font-size:12px;
+}
+
+/* =========================================
+   DOTS
+========================================= */
+
+.dot{
+
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+}
+
+.dot.green{
+  background:#00e096;
+}
+
+.dot.yellow{
+  background:#ffc542;
+}
+
+.dot.orange{
+  background:#ff9f43;
+}
+
+.dot.red{
+  background:#ff5c7c;
+}
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+.tableCard{
+
+  overflow:hidden;
+}
+
+/* TABLE */
+
+table{
+
+  width:100%;
+
+  border-collapse:collapse;
+}
+
+/* TH */
+
+th{
+
+  text-align:left;
+
+  padding:10px 0;
+
+  font-size:11px;
+  font-weight:600;
+
+  color:var(--muted);
+
+  border-bottom:1px solid var(--border);
+}
+
+/* TD */
+
+td{
+
+  padding:12px 0;
+
+  font-size:13px;
+
+  border-bottom:1px solid #132238;
+}
+
+/* =========================================
+   BADGE
+========================================= */
+
+.statusBadge{
+
+  padding:5px 10px;
+
+  border-radius:999px;
+
+  font-size:10px;
+  font-weight:700;
+}
+
+.completed{
+
+  background:
+    rgba(0,224,150,.14);
+
+  color:var(--green);
+}
+
+.danger{
+
+  background:
+    rgba(255,92,124,.14);
+
+  color:var(--red);
+}
+
+/* =========================================
+   ALERTS
+========================================= */
+
+.alertsCard{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:12px;
+}
+
+/* ALERT ITEM */
+
+.alertItem{
+
+  display:flex;
+  align-items:flex-start;
+
+  gap:10px;
+
+  padding:12px;
+
+  border-radius:12px;
+
+  background:#0f1d33;
+
+  border:1px solid var(--border);
+}
+
+/* DOT */
+
+.alertDot{
+
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:var(--red);
+
+  margin-top:4px;
+}
+
+/* TITLE */
+
+.alertItem h4{
+
+  margin-bottom:4px;
+
+  font-size:13px;
+}
+
+/* TEXT */
+
+.alertItem p{
+
+  color:var(--muted);
+
+  font-size:11px;
+
+  line-height:1.5;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1200px){
+
+  .statsGrid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .middleGrid,
+  .bottomGrid{
+    grid-template-columns:1fr;
+  }
+}

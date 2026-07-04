@@ -1,0 +1,163 @@
+==============================
+AI PATIENT ASSISTANT PROMPTS
+Real-Time Healthcare Voice AI
+==============================
+
+======== BASIC HEALTH =========
+
+Hello
+How are you?
+I am not feeling well
+I have fever
+I have headache
+I feel weak
+I have body pains
+I have cold and cough
+I feel tired
+I have sore throat
+
+======== FEVER CASES =========
+
+My fever started yesterday
+My temperature is very high
+I have chills and fever
+I am sweating a lot
+I have viral fever symptoms
+I feel cold and shivering
+
+======== RESPIRATORY =========
+
+I have breathing difficulty
+I can't breathe properly
+I have chest congestion
+I have asthma
+I am coughing continuously
+I have shortness of breath
+
+======== EMERGENCY TESTING =========
+
+I have chest pain
+I think I am having a heart attack
+Help me
+Emergency
+I fainted
+I am unconscious
+I feel severe pain
+I cannot breathe
+There is blood vomiting
+I feel dizzy and collapsing
+
+======== BLOOD PRESSURE =========
+
+My blood pressure is high
+I feel my BP is low
+I have hypertension
+I feel dizzy when standing
+My heart is beating fast
+
+======== DIABETES =========
+
+My sugar levels are high
+I feel very thirsty
+I feel weakness due to diabetes
+I missed my insulin
+My glucose level is low
+
+======== POST-DISCHARGE =========
+
+I recently got discharged
+I forgot my medicines
+When should I take tablets?
+I missed today's medication
+I have pain after surgery
+My wound is hurting
+
+======== MENTAL HEALTH =========
+
+I feel stressed
+I feel anxious
+I am depressed
+I cannot sleep
+I feel lonely
+I feel panic
+
+======== MEDICATION =========
+
+Can I take paracetamol?
+What medicine should I take?
+I forgot my dosage
+Can I take medicine after food?
+What are the side effects?
+
+======== DAILY HEALTH =========
+
+What food should I eat?
+How much water should I drink?
+Can I exercise?
+How much sleep is needed?
+How to recover faster?
+
+======== TELUGU TESTING =========
+
+నాకు జ్వరం ఉంది
+నాకు తలనొప్పి ఉంది
+నాకు శ్వాస తీసుకోవడం కష్టం
+నాకు ఛాతిలో నొప్పి ఉంది
+నాకు బలహీనంగా ఉంది
+నాకు దగ్గు ఉంది
+నాకు సహాయం కావాలి
+
+======== VOICE AI TEST =========
+
+Can you hear me?
+Is my microphone working?
+Speak in Telugu
+Talk slowly
+Repeat that again
+
+======== EXIT COMMANDS =========
+
+bye
+stop
+exit
+goodbye
+terminate session
+
+==============================
+ADVANCED FUTURE TEST PROMPTS
+==============================
+
+Show patient risk analysis
+Generate patient report
+Alert hospital
+Call emergency contact
+Send doctor notification
+Analyze patient symptoms
+Predict health risk
+Start live monitoring
+Generate discharge summary
+Show patient analytics
+
+==============================
+WEBSOCKET / REAL-TIME ALERTS
+==============================
+
+Critical patient detected
+Trigger emergency alert
+Patient oxygen is low
+Heart rate abnormal
+Emergency monitoring required
+
+==============================
+DOCTOR DASHBOARD TESTS
+==============================
+
+Show active patients
+Show critical cases
+Show patient vitals
+Generate health analytics
+Display emergency alerts
+
+==============================
+END OF PROMPTS
+==============================

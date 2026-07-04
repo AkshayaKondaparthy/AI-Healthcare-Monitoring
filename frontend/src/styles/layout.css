@@ -1,0 +1,223 @@
+/* =========================================================
+   APP LAYOUT
+========================================================= */
+
+.appLayout {
+
+  display: flex;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: var(--bg);
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.mainSection {
+
+  flex: 1;
+
+  margin-left: 275px;
+
+  width: calc(100% - 275px);
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow-x: hidden;
+
+  overflow-y: auto;
+}
+
+/* =========================================================
+   PAGE CONTENT
+========================================================= */
+
+.pageContent {
+
+  flex: 1;
+
+  padding-top: 100px;
+
+  padding-left: 28px;
+
+  padding-right: 28px;
+
+  padding-bottom: 40px;
+
+  min-height: 100vh;
+
+  background: var(--bg);
+
+  overflow-x: hidden;
+
+  overflow-y: visible;
+}
+
+/* =========================================================
+   NAVBAR FIX
+========================================================= */
+
+.navbar {
+
+  position: fixed;
+
+  top: 0;
+
+  right: 0;
+
+  width: calc(100% - 275px);
+
+  height: 80px;
+
+  z-index: 1000;
+
+  background:
+    rgba(10, 20, 36, 0.92);
+
+  backdrop-filter:
+    blur(16px);
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.logoutBtn {
+
+  border: none;
+
+  background: #ef4444;
+
+  color: white;
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  transition: .25s ease;
+}
+
+.logoutBtn:hover {
+
+  background: #dc2626;
+
+  transform:
+    translateY(-2px);
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.pageContent::-webkit-scrollbar,
+.mainSection::-webkit-scrollbar {
+
+  width: 8px;
+}
+
+.pageContent::-webkit-scrollbar-thumb,
+.mainSection::-webkit-scrollbar-thumb {
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--primary),
+      #7d5cff
+    );
+
+  border-radius: 999px;
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .mainSection {
+
+    margin-left: 90px;
+
+    width: calc(100% - 90px);
+  }
+
+  .navbar {
+
+    width: calc(100% - 90px);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .mainSection {
+
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  .navbar {
+
+    width: 100%;
+
+    left: 0;
+  }
+
+  .pageContent {
+
+    padding-left: 16px;
+
+    padding-right: 16px;
+
+    padding-top: 90px;
+  }
+}
+
+/* =========================================================
+   VERY IMPORTANT FIXES
+========================================================= */
+
+/* REMOVE PAGE LOCK */
+
+html,
+body,
+#root {
+
+  overflow-y: auto !important;
+
+  height: auto !important;
+}
+
+/* PREVENT HIDDEN SCROLL */
+
+body {
+
+  overflow-x: hidden;
+}

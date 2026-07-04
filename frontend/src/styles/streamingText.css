@@ -1,0 +1,585 @@
+/* =========================================================
+   STREAMING CONTAINER
+========================================================= */
+
+.streaming-container{
+
+  width:100%;
+
+  padding:22px;
+
+  border-radius:28px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15,23,42,.96),
+      rgba(30,41,59,.92)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.45);
+
+  backdrop-filter:
+    blur(20px);
+
+  animation:
+    fadeStreaming .5s ease;
+}
+
+/* =========================================================
+   BACKGROUND EFFECTS
+========================================================= */
+
+.streaming-container::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:350px;
+  height:350px;
+
+  top:-180px;
+  right:-180px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(59,130,246,.22),
+      transparent 70%
+    );
+
+  animation:
+    rotateGlow 12s linear infinite;
+}
+
+.streaming-container::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:260px;
+  height:260px;
+
+  bottom:-120px;
+  left:-120px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(34,197,94,.16),
+      transparent 70%
+    );
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.streaming-header{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:20px;
+
+  margin-bottom:24px;
+
+  position:relative;
+  z-index:2;
+}
+
+.streaming-left{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:16px;
+}
+
+/* =========================================================
+   AI AVATAR
+========================================================= */
+
+.streaming-ai-avatar{
+
+  width:68px;
+  height:68px;
+
+  min-width:68px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  position:relative;
+
+  font-size:28px;
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #8b5cf6
+    );
+
+  box-shadow:
+    0 0 35px rgba(59,130,246,.45);
+}
+
+.avatar-glow{
+
+  position:absolute;
+
+  inset:-8px;
+
+  border-radius:50%;
+
+  border:
+    2px solid rgba(59,130,246,.3);
+
+  animation:
+    pulseGlow 2s infinite;
+}
+
+.streaming-left h3{
+
+  font-size:18px;
+
+  font-weight:800;
+
+  color:white;
+}
+
+.streaming-left p{
+
+  margin-top:4px;
+
+  color:#94a3b8;
+
+  font-size:13px;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.streaming-status{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:10px 16px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.06);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  font-size:13px;
+
+  font-weight:700;
+
+  color:#22c55e;
+}
+
+.spin-icon{
+
+  animation:
+    spin 1s linear infinite;
+}
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.streaming-body{
+
+  display:flex;
+
+  gap:16px;
+
+  position:relative;
+
+  z-index:2;
+}
+
+.ai-brain{
+
+  width:52px;
+  height:52px;
+
+  min-width:52px;
+
+  border-radius:16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139,92,246,.25),
+      rgba(59,130,246,.25)
+    );
+
+  color:#8b5cf6;
+
+  font-size:22px;
+
+  box-shadow:
+    inset 0 0 15px rgba(255,255,255,.05);
+}
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.streaming-message{
+
+  flex:1;
+
+  line-height:1.9;
+
+  font-size:16px;
+
+  color:#f8fafc;
+
+  word-break:break-word;
+}
+
+.highlight-word{
+
+  color:#22c55e;
+
+  font-weight:700;
+
+  text-shadow:
+    0 0 12px rgba(34,197,94,.35);
+}
+
+/* =========================================================
+   CURSOR
+========================================================= */
+
+.typing-cursor{
+
+  color:#3b82f6;
+
+  font-weight:900;
+
+  margin-left:3px;
+
+  font-size:18px;
+}
+
+/* =========================================================
+   VOICE VISUALIZER
+========================================================= */
+
+.voice-visualizer{
+
+  margin-top:24px;
+
+  padding:18px;
+
+  border-radius:22px;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  gap:5px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(59,130,246,.08),
+      rgba(139,92,246,.08)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.05);
+
+  position:relative;
+  z-index:2;
+}
+
+.voice-visualizer svg{
+
+  margin-right:10px;
+
+  color:#22c55e;
+
+  font-size:18px;
+}
+
+.voice-visualizer span{
+
+  width:5px;
+
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #22c55e,
+      #3b82f6
+    );
+
+  box-shadow:
+    0 0 10px rgba(34,197,94,.45);
+}
+
+/* =========================================================
+   ANALYTICS
+========================================================= */
+
+.streaming-analytics{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:22px;
+
+  position:relative;
+  z-index:2;
+}
+
+.analytics-pill{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:10px 14px;
+
+  border-radius:999px;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  color:#cbd5e1;
+}
+
+.analytics-pill svg{
+  color:#22c55e;
+}
+
+.analytics-pill.success{
+
+  background:
+    rgba(34,197,94,.1);
+}
+
+.analytics-pill.purple{
+
+  background:
+    rgba(139,92,246,.12);
+}
+
+.analytics-pill.purple svg{
+  color:#8b5cf6;
+}
+
+/* =========================================================
+   LIVE WORD
+========================================================= */
+
+.live-word{
+
+  margin-top:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  font-size:14px;
+
+  color:#94a3b8;
+
+  position:relative;
+  z-index:2;
+}
+
+.live-word strong{
+
+  color:#22c55e;
+
+  font-size:15px;
+
+  text-shadow:
+    0 0 10px rgba(34,197,94,.4);
+}
+
+/* =========================================================
+   SPEAKING MODE
+========================================================= */
+
+.speaking-mode{
+
+  border:
+    1px solid rgba(34,197,94,.3);
+
+  box-shadow:
+    0 0 35px rgba(34,197,94,.18);
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeStreaming{
+
+  from{
+
+    opacity:0;
+
+    transform:
+      translateY(20px);
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+@keyframes rotateGlow{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow{
+
+  0%{
+
+    transform:scale(1);
+
+    opacity:1;
+  }
+
+  100%{
+
+    transform:scale(1.25);
+
+    opacity:0;
+  }
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:768px){
+
+  .streaming-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+  .streaming-body{
+
+    flex-direction:column;
+  }
+
+  .streaming-message{
+
+    font-size:15px;
+  }
+
+  .streaming-ai-avatar{
+
+    width:60px;
+    height:60px;
+
+    min-width:60px;
+  }
+}
+
+@media(max-width:500px){
+
+  .streaming-container{
+
+    padding:18px;
+  }
+
+  .streaming-left h3{
+
+    font-size:16px;
+  }
+
+  .voice-visualizer{
+
+    gap:4px;
+  }
+
+  .voice-visualizer span{
+
+    width:4px;
+  }
+}

@@ -1,0 +1,583 @@
+/* =========================================================
+   ADVANCED ECG CARD
+========================================================= */
+
+.ecg-main-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  padding:28px;
+
+  border-radius:32px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(15,23,42,.95),
+      rgba(2,6,23,.92)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:
+    blur(20px);
+
+  box-shadow:
+
+    0 20px 60px rgba(0,0,0,.45),
+
+    inset 0 1px 0 rgba(255,255,255,.04);
+
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+.ecg-main-card:hover{
+
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+
+    0 30px 70px rgba(0,0,0,.55),
+
+    0 0 40px rgba(34,197,94,.12);
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.ecg-main-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:320px;
+  height:320px;
+
+  top:-140px;
+  right:-120px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(34,197,94,.18),
+      transparent 70%
+    );
+
+  animation:
+    glowMove 6s ease-in-out infinite;
+}
+
+.ecg-main-card::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,.02),
+      transparent
+    );
+
+  animation:
+    shimmer 6s linear infinite;
+
+  pointer-events:none;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ecg-topbar{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:26px;
+}
+
+.ecg-title-section{
+
+  display:flex;
+  align-items:center;
+
+  gap:18px;
+}
+
+.pulse-icon{
+
+  width:70px;
+  height:70px;
+
+  border-radius:22px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #16a34a
+    );
+
+  color:white;
+
+  font-size:30px;
+
+  box-shadow:
+    0 0 30px rgba(34,197,94,.35);
+
+  animation:
+    pulseBeat 1.5s infinite;
+}
+
+.ecg-title-section h2{
+
+  color:white;
+
+  font-size:24px;
+  font-weight:800;
+
+  margin-bottom:4px;
+}
+
+.ecg-title-section p{
+
+  color:#94a3b8;
+
+  font-size:14px;
+}
+
+/* =========================================================
+   LIVE BADGE
+========================================================= */
+
+.ecg-live-badge{
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:
+    rgba(34,197,94,.12);
+
+  border:
+    1px solid rgba(34,197,94,.28);
+
+  color:#22c55e;
+
+  font-size:13px;
+  font-weight:700;
+
+  box-shadow:
+    0 0 20px rgba(34,197,94,.15);
+}
+
+.live-dot{
+
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#22c55e;
+
+  animation:
+    blink 1s infinite;
+}
+
+/* =========================================================
+   STATS GRID
+========================================================= */
+
+.ecg-stats-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+  gap:18px;
+
+  margin-bottom:28px;
+}
+
+.ecg-stat-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+
+  gap:16px;
+
+  padding:18px;
+
+  border-radius:22px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid rgba(255,255,255,.06);
+
+  transition:
+    transform .3s ease,
+    background .3s ease;
+}
+
+.ecg-stat-card:hover{
+
+  transform:
+    translateY(-4px);
+
+  background:
+    rgba(255,255,255,.06);
+}
+
+.ecg-stat-card svg{
+
+  font-size:28px;
+
+  color:#22c55e;
+
+  filter:
+    drop-shadow(
+      0 0 12px rgba(34,197,94,.4)
+    );
+}
+
+.ecg-stat-card h4{
+
+  color:#94a3b8;
+
+  font-size:13px;
+
+  margin-bottom:6px;
+}
+
+.ecg-stat-card p{
+
+  color:white;
+
+  font-size:20px;
+  font-weight:800;
+}
+
+/* =========================================================
+   ECG CHART
+========================================================= */
+
+.ecg-chart-wrapper{
+
+  position:relative;
+
+  overflow:hidden;
+
+  height:260px;
+
+  border-radius:28px;
+
+  padding:12px;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      rgba(15,23,42,.9),
+      rgba(2,6,23,.9)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.06);
+
+  box-shadow:
+
+    inset 0 0 40px rgba(0,0,0,.35),
+
+    0 10px 30px rgba(0,0,0,.3);
+}
+
+/* =========================================================
+   ECG GRID EFFECT
+========================================================= */
+
+.ecg-chart-wrapper::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+    linear-gradient(
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    30px 30px;
+
+  pointer-events:none;
+}
+
+/* =========================================================
+   SCAN LINE
+========================================================= */
+
+.scan-line{
+
+  position:absolute;
+
+  top:0;
+  left:-100%;
+
+  width:100%;
+  height:100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(34,197,94,.18),
+      transparent
+    );
+
+  animation:
+    scanMove 3s linear infinite;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ecg-footer{
+
+  position:relative;
+
+  overflow:hidden;
+
+  margin-top:24px;
+
+  padding:16px 20px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid rgba(255,255,255,.05);
+
+  text-align:center;
+}
+
+.ecg-footer p{
+
+  color:#cbd5e1;
+
+  font-size:13px;
+  font-weight:600;
+
+  letter-spacing:.5px;
+}
+
+/* =========================================================
+   TOOLTIP
+========================================================= */
+
+.ecg-tooltip{
+
+  padding:10px 14px;
+
+  border-radius:14px;
+
+  background:
+    rgba(15,23,42,.96);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  color:white;
+
+  font-size:13px;
+
+  backdrop-filter:
+    blur(10px);
+
+  box-shadow:
+    0 10px 20px rgba(0,0,0,.35);
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes pulseBeat{
+
+  0%{
+
+    transform:scale(1);
+
+    box-shadow:
+      0 0 0 rgba(34,197,94,.2);
+  }
+
+  50%{
+
+    transform:scale(1.08);
+
+    box-shadow:
+      0 0 35px rgba(34,197,94,.45);
+  }
+
+  100%{
+
+    transform:scale(1);
+
+    box-shadow:
+      0 0 0 rgba(34,197,94,.2);
+  }
+}
+
+@keyframes blink{
+
+  0%{
+    opacity:1;
+  }
+
+  50%{
+    opacity:.3;
+  }
+
+  100%{
+    opacity:1;
+  }
+}
+
+@keyframes scanMove{
+
+  0%{
+    left:-100%;
+  }
+
+  100%{
+    left:120%;
+  }
+}
+
+@keyframes shimmer{
+
+  0%{
+    transform:translateX(-100%);
+  }
+
+  100%{
+    transform:translateX(200%);
+  }
+}
+
+@keyframes glowMove{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(20px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:768px){
+
+  .ecg-main-card{
+
+    padding:20px;
+  }
+
+  .ecg-topbar{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:18px;
+  }
+
+  .ecg-stats-grid{
+
+    grid-template-columns:1fr 1fr;
+  }
+
+  .pulse-icon{
+
+    width:60px;
+    height:60px;
+
+    font-size:24px;
+  }
+
+  .ecg-title-section h2{
+
+    font-size:20px;
+  }
+}
+
+@media(max-width:500px){
+
+  .ecg-stats-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .ecg-chart-wrapper{
+
+    height:220px;
+  }
+
+  .ecg-title-section{
+
+    align-items:flex-start;
+  }
+}

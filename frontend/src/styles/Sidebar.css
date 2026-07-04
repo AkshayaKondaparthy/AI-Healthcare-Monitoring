@@ -1,0 +1,567 @@
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:280px;
+  height:100vh;
+
+  padding:22px 18px;
+
+  display:flex;
+  flex-direction:column;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8,15,30,.98),
+      rgba(12,20,38,.98)
+    );
+
+  border-right:
+    1px solid rgba(255,255,255,.06);
+
+  backdrop-filter:
+    blur(24px);
+
+  z-index:1200;
+
+  overflow:hidden;
+}
+
+/* =========================================================
+   SIDEBAR GLOW
+========================================================= */
+
+.sidebar::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:-120px;
+  right:-120px;
+
+  width:260px;
+  height:260px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,212,255,.18),
+      transparent 70%
+    );
+
+  pointer-events:none;
+}
+
+.sidebar::after{
+
+  content:"";
+
+  position:absolute;
+
+  bottom:-140px;
+  left:-100px;
+
+  width:260px;
+  height:260px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(125,92,255,.16),
+      transparent 70%
+    );
+
+  pointer-events:none;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.sidebarLogo{
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+  gap:16px;
+
+  padding:14px 14px 22px;
+
+  margin-bottom:18px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.06);
+}
+
+/* =========================================================
+   LOGO ICON
+========================================================= */
+
+.logoIcon{
+
+  min-width:52px;
+  width:52px;
+  height:52px;
+
+  border-radius:18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00d4ff,
+      #7d5cff
+    );
+
+  color:white;
+
+  font-size:22px;
+
+  box-shadow:
+    0 10px 30px rgba(0,212,255,.35);
+
+  animation:
+    logoFloat 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   LOGO TEXT
+========================================================= */
+
+.sidebarLogo h2{
+
+  font-size:22px;
+  font-weight:800;
+
+  color:white;
+
+  letter-spacing:-0.5px;
+}
+
+.sidebarLogo p{
+
+  margin-top:4px;
+
+  font-size:12px;
+
+  color:#94a3b8;
+
+  letter-spacing:.4px;
+}
+
+/* =========================================================
+   MENU TITLE
+========================================================= */
+
+.sidebarTitle{
+
+  padding:0 14px;
+
+  margin-bottom:14px;
+
+  font-size:11px;
+  font-weight:700;
+
+  color:#64748b;
+
+  letter-spacing:2px;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.sidebarLinks{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:10px;
+
+  overflow-y:auto;
+
+  padding-right:4px;
+}
+
+/* =========================================================
+   CUSTOM SCROLL
+========================================================= */
+
+.sidebarLinks::-webkit-scrollbar{
+
+  width:5px;
+}
+
+.sidebarLinks::-webkit-scrollbar-thumb{
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.08);
+}
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.sidebarItem{
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  min-height:56px;
+
+  padding:0 18px;
+
+  border-radius:18px;
+
+  color:#94a3b8;
+
+  cursor:pointer;
+
+  transition:
+    all .28s ease;
+
+  overflow:hidden;
+
+  border:
+    1px solid transparent;
+}
+
+/* =========================================================
+   ITEM HOVER
+========================================================= */
+
+.sidebarItem:hover{
+
+  transform:
+    translateX(6px);
+
+  color:white;
+
+  border:
+    1px solid rgba(255,255,255,.06);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.02)
+    );
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.25);
+}
+
+/* =========================================================
+   ACTIVE ITEM
+========================================================= */
+
+.sidebarItem.active{
+
+  color:white;
+
+  border:
+    1px solid rgba(0,212,255,.2);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,212,255,.16),
+      rgba(125,92,255,.10)
+    );
+
+  box-shadow:
+    0 10px 24px rgba(0,212,255,.12);
+}
+
+.sidebarItem.active::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:10px;
+
+  width:4px;
+  height:36px;
+
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #00d4ff,
+      #7d5cff
+    );
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.sidebarIcon{
+
+  width:38px;
+  height:38px;
+
+  border-radius:12px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    rgba(255,255,255,.04);
+
+  font-size:17px;
+
+  transition:.3s;
+}
+
+.sidebarItem:hover .sidebarIcon{
+
+  transform:
+    scale(1.08);
+
+  background:
+    rgba(255,255,255,.08);
+}
+
+.sidebarItem.active .sidebarIcon{
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,212,255,.18),
+      rgba(125,92,255,.18)
+    );
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.sidebarItem span{
+
+  font-size:15px;
+  font-weight:600;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.sidebarFooter{
+
+  margin-top:auto;
+
+  padding-top:18px;
+}
+
+/* =========================================================
+   STATUS CARD
+========================================================= */
+
+.systemStatus{
+
+  position:relative;
+
+  padding:18px;
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15,23,42,.92),
+      rgba(15,23,42,.75)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.06);
+
+  overflow:hidden;
+}
+
+.systemStatus::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,212,255,.08),
+      transparent 40%
+    );
+}
+
+/* =========================================================
+   LIVE ROW
+========================================================= */
+
+.systemStatus{
+
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+}
+
+/* =========================================================
+   LIVE ICON
+========================================================= */
+
+.liveIcon{
+
+  color:#22c55e;
+
+  font-size:11px;
+
+  animation:
+    pulseLive 1.4s infinite;
+}
+
+/* =========================================================
+   STATUS TEXT
+========================================================= */
+
+.systemStatus h4{
+
+  color:white;
+
+  font-size:14px;
+  font-weight:700;
+}
+
+.systemStatus p{
+
+  margin-top:5px;
+
+  font-size:12px;
+
+  color:#94a3b8;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes pulseLive{
+
+  0%{
+
+    opacity:1;
+
+    transform:scale(1);
+  }
+
+  50%{
+
+    opacity:.5;
+
+    transform:scale(1.5);
+  }
+
+  100%{
+
+    opacity:1;
+
+    transform:scale(1);
+  }
+}
+
+@keyframes logoFloat{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-6px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+  .sidebar{
+
+    width:90px;
+
+    padding:18px 10px;
+  }
+
+  .sidebarLogo h2,
+  .sidebarLogo p,
+  .sidebarTitle,
+  .sidebarItem span,
+  .systemStatus div{
+
+    display:none;
+  }
+
+  .sidebarLogo{
+
+    justify-content:center;
+  }
+
+  .sidebarItem{
+
+    justify-content:center;
+
+    padding:0;
+  }
+
+  .sidebarFooter{
+
+    display:none;
+  }
+
+  .sidebarItem.active::before{
+
+    left:8px;
+  }
+}
+
+@media(max-width:768px){
+
+  .sidebar{
+
+    transform:translateX(-100%);
+  }
+}
