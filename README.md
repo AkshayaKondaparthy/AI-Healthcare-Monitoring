@@ -138,14 +138,6 @@ Runs on 👉 [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ---
 
-## 👥 Team Roles
-
-* 👤 Frontend – UI, Dashboard, API integration
-* 👤 Backend – APIs, workflow logic
-* 👤 Database – Schema, storage
-* 👤 AI/Integrations – LLM, decision engine, voice
-
----
 
 ## 🔮 Future Enhancements
 
@@ -167,22 +159,4 @@ This project demonstrates a **real-world AI healthcare solution** that automates
 Built as part of an AI + Full Stack project for learning and innovation in healthcare systems.
 
 ---
-
-# 🎯 What you should do now
-
-1. Create a file:
-
-```
-README.md
-```
-
-2. Paste this content
-3. Replace:
-
-```
-your-username
-```
-
-with your GitHub username
-
 
