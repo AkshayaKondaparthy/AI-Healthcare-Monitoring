@@ -7,3 +7,4 @@ python-socketio
 requests
 twilio
 groq
+psycopg2-binary
